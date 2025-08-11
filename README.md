@@ -1,4 +1,4 @@
-# LRU Cache for Range Sum Queries Optimization
+# Task 1: LRU Cache for Range Sum Queries Optimization
 
 This project demonstrates how an **LRU (Least Recently Used) cache** can significantly speed up repeated "hot" queries for sum ranges in a large array of integers.
 
@@ -39,5 +39,50 @@ python lru_range_sum.py
 
 ---
 
+# Task 2: Fibonacci Performance Comparison: LRU Cache vs Splay Tree
 
+## Overview
 
+This project implements two different approaches to computing Fibonacci numbers with memoization to improve performance:
+
+- **LRU Cache Approach:** Uses Python's built-in `@lru_cache` decorator to automatically cache previously computed Fibonacci values.
+- **Splay Tree Approach:** Uses a self-implemented Splay Tree data structure to store and retrieve previously computed Fibonacci numbers.
+
+The goal is to compare the performance of these two caching mechanisms by measuring the average execution time of calculating Fibonacci numbers for various inputs.
+
+---
+
+## Features
+
+- Two Fibonacci implementations:
+  - `fibonacci_lru(n)` — recursive function with `@lru_cache`.
+  - `fibonacci_splay(n, tree)` — recursive function using a custom Splay Tree as cache.
+  
+- Performance measurement:
+  - Measures average execution time for each approach using Python's `timeit` module.
+  - Tests inputs from 0 to 350 (inclusive) stepping by 50.
+  
+- Output:
+  - Prints a formatted table of results showing execution times for each method.
+  - Plots a comparison graph of execution times using `matplotlib`.
+
+---
+
+## Installation
+
+1. Ensure you have Python 3.7+ installed.
+2. Install required packages:
+```bash
+pip install matplotlib
+```
+## Usage
+
+Run the test script:
+
+```bash
+python fibonacci.py
+```
+
+## Result
+
+![Logistics Network Graph](results/fibonacci.jpg)
